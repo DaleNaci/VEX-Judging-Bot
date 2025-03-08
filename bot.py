@@ -10,6 +10,9 @@ class JudgingBot(commands.Bot):
     
 
     async def setup_hook(self):
+        """
+        Goes through the cogs directory and loads each cog into the bot
+        """
         for filename in os.listdir("./cogs"):
             if filename.endswith(".py"):
                 cog_name = f"cogs.{filename[:-3]}"

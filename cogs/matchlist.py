@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 
 
-class HelloWorld(commands.Cog):
+class MatchList(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
@@ -12,14 +12,9 @@ class HelloWorld(commands.Cog):
         if message.author.bot:
             return
         
-        if message.content.lower() == "hello":
-            await message.channel.send("Hello, world!")
+        pass
+
+
     
-
-    @commands.command()
-    async def goodbye(self, ctx):
-        await ctx.send("Cya!")
-
-
 async def setup(bot):
-    await bot.add_cog(HelloWorld(bot))
+    await bot.add_cog(MatchList(bot))
